@@ -1,6 +1,6 @@
 # SpaceX missions list
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).<br/>
 The backeend for the project can be found here => [backend](https://github.com/noureddine8/spaceX_graphql)
 
 ## Available Scripts

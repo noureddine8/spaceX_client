@@ -1,7 +1,7 @@
 import React from "react";
 
 function LaunchItem({ launch }) {
-  const { flight_number, mission_name, launch_year, launch_success } = launch;
+  const { mission_name, launch_year, launch_success } = launch;
   return (
     <div
       style={{
@@ -15,12 +15,9 @@ function LaunchItem({ launch }) {
         alignItems: "center",
       }}
     >
-      <div style={{ flex: 1 }}>
-        <p style={{ color: "white", fontSize: 30 }}>{flight_number}</p>
-      </div>
       <div style={{ flex: 8 }}>
-        <p style={{ color: "white", fontWeight: "bold", fontSize: 30 }}>
-          {mission_name}
+        <p style={{ color: "white", fontWeight: "bold", fontSize: 28 }}>
+          Mission : {mission_name}
         </p>
       </div>
       <div style={{ flex: 2 }}>
@@ -29,9 +26,9 @@ function LaunchItem({ launch }) {
       <div style={{ flex: 1 }}>
         <h3 style={{ color: launch_success ? "green" : "red" }}>
           {launch_success ? (
-            <i class="fa fa-check" aria-hidden="true"></i>
+            <i class="fa fa-check fa-lg" aria-hidden="true"></i>
           ) : (
-            <i class="fa fa-times" aria-hidden="true"></i>
+            <i class="fa fa-times fa-lg" aria-hidden="true"></i>
           )}
         </h3>
       </div>

@@ -15,9 +15,21 @@ const LAUNCHES_QUERY = gql`
 
 function Launches() {
   const { data, loading, error } = useQuery(LAUNCHES_QUERY);
-  if (loading) return <h3>Loading ...</h3>;
+  if (loading)
+    return (
+      <div
+        style={{
+          textAlign: "center",
+          alignItems: "center",
+          justifyContent: "center",
+          marginTop: 200,
+        }}
+      >
+        <h3 style={{ fontSize: 30 }}>Loading ...</h3>
+      </div>
+    );
   else if (error) return <h3>Opps, Error</h3>;
-  return data.launches.map((launch) => (
+  return data?.launches.map((launch) => (
     <LaunchItem key={launch.flight_number} launch={launch} />
   ));
 }
